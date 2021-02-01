@@ -1,7 +1,9 @@
 import pyttsx3 as pys
 import PyPDF2 as pypdf
 
-book = open('clash.pdf', 'rb')
+# Must enter complete path including book name and extension
+bookPath = input("Enter book path : ")
+book = open(bookPath, 'rb')
 pdfReader = pypdf.PdfFileReader(book)
 
 # pages = pdfReader.numPages
