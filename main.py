@@ -15,13 +15,17 @@ rate = engine.getProperty("rate")
 # print("Female voice : {0}".format(voices[1].id))
 # engine.say("Hey, how's your day?")
 
+# Setting voice and rate of speech
 engine.setProperty('voice', voices[1].id)
 engine.setProperty("rate", 275)
 
 # engine.say("Hey, how's your day?")
 
+# Taking starting and ending pages as input
 start = int(input("Enter the starting page : "))
 end = int(input("Enter the ending page : "))
+
+# Reading through pages
 for num in range(start, end) :
     page = pdfReader.getPage(num)
     text = page.extractText()
